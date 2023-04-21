@@ -1,0 +1,81 @@
+
+/* this tag where to add to background to the body  */
+
+body{
+    background-image: url(img/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: 800px;
+    background-position: 90% -25%;
+}
+
+#cta{
+    background-image: url(img/bg-simplify-section-mobile.svg );
+    background-repeat: no-repeat;
+}
+
+/* and this tags is to make sure that the background Desktop should also display on mobile */
+@media(max-width: 576px){
+    body{
+        background-position: 50px -50px;
+        background-size: 500px;
+    }
+    #cta{
+        background-image: url(img/bg-simplify-section-mobile.svg);
+    }
+}
+
+/* THE BEGINNING OF NAVIGATION MENU CODING  */
+
+/* the hamberger tag work the navigation are the 3 dots  */
+/* when click it change X  */
+
+
+/* hamberger menu for navigation  */
+.hamburger{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: all 0.25s;
+    position: relative;
+}
+
+/* inputing hamburger menu to styles it  */
+.hamburger-top,
+.hamburger-middle,
+.hamburger-buttom{
+    position: absolute;
+     top: 0;
+     left: 0;
+     width: 24px;
+     height: 2px;
+     background: #000;
+
+     transform: rotate(0);
+     transition: all 0.5s;
+}
+.hamburger-middle{
+    transform: translateY(7px);
+}
+.hamburger-buttom{
+    transform: translateY(14px);
+}
+
+/* the open call is the coding of X in the menu navigation  */
+
+.open{
+    transform: rotate(90deg);
+    transform: translateY(0px);
+}
+
+.open .hamburger-top{
+    transform: rotate(45deg) translateY(6px) translate(6px)
+}
+.open .hamburger-middle {
+    display: none;
+}
+.open .hamburger-buttom{
+    transform: rotate(-45deg) translateY(6px) translate(-6px)
+}
+
+/* the open call is the coding of X in the menu navigation  */
+
